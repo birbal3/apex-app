@@ -21,7 +21,7 @@ import {
         dispatch(AddUserRequest());
 
         const response = await fetch(
-            "http://localhost:4000/api/v1/addpokemonuser",
+            "https://apex-app.onrender.com/api/v1/addpokemonuser",
             {
                 method:"PUT",
                 body:JSON.stringify({owner,name,ability,positionX,positionY,speed,direction}),
@@ -48,7 +48,7 @@ import {
 export const fetchAllUsers = ()=>async (dispatch)=>{
     try {
         dispatch(GetUserRequest())
-        const response = await fetch("http://localhost:4000/api/v1/getallusers",
+        const response = await fetch("https://apex-app.onrender.com/api/v1/getallusers",
             {
                 method:"GET",
             }
@@ -71,7 +71,7 @@ export const addPokemon = (id,name,ability)=>async (dispatch)=>{
     try {
         dispatch(AddPokemonRequest())
 
-        const response = await axios.put("http://localhost:4000/api/v1/addpokemontouser",
+        const response = await axios.put("https://apex-app.onrender.com/api/v1/addpokemontouser",
             {
                 method:"PUT",
                 body:JSON.stringify({id,name,ability}),
@@ -97,7 +97,7 @@ export const deleteUser = (id)=>async (dispatch)=>{
     try {
         dispatch(DeleteUserRequest())
 
-        const response = await fetch("http://localhost:4000/api/v1/removeuser",
+        const response = await fetch("https://apex-app.onrender.com/api/v1/removeuser",
             {
                 method:"DELETE",
                 body:JSON.stringify({id}),
@@ -124,7 +124,7 @@ export const deleteAllUsers = ()=>async (dispatch)=>{
     try {
         dispatch(DeleteAllUsersRequest())
 
-        const response = await fetch("http://localhost:4000/api/v1/removealluser",
+        const response = await fetch("https://apex-app.onrender.com/api/v1/removealluser",
             {
                 method:"DELETE",
             }
